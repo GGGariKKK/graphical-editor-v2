@@ -5,8 +5,8 @@ import graphical.editor.v2.Shape;
 public abstract class Polygon extends Shape {
     protected int[] sides;
 
-    public Polygon(int xCoordinate, int yCoordinate, String name, int[] sides) {
-        super(xCoordinate, yCoordinate, name);
+    public Polygon(int xCoordinate, int yCoordinate, String name, String graphicalRepresentation, int[] sides) {
+        super(xCoordinate, yCoordinate, name, graphicalRepresentation);
         this.sides = sides;
     }
 }

@@ -1,5 +1,5 @@
 package graphical.editor.v2;
 
-public interface Displayable {
+public interface ShapeConsoleDisplayer {
     void display();
 }

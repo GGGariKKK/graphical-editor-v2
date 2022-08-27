@@ -1,6 +1,6 @@
 package graphical.editor.v2;
 
-public abstract class Shape implements Displayable{
+public abstract class Shape {
     protected int xCoordinate;
     protected int yCoordinate;
     protected String name;
@@ -11,4 +11,7 @@ public abstract class Shape implements Displayable{
         this.name = name;
     }
 
+    public String getName() {
+        return name;
+    }
 }

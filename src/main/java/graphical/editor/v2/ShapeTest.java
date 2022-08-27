@@ -13,43 +13,41 @@ public class ShapeTest {
     public static Random rand = new Random();
 
     public static void main(String[] args) {
-        System.out.println("Displaying through Displayable interface:\n");
 
-        Displayable rectangle1 = new Rectangle(rand(), rand(), rand(), rand());
-        rectangle1.display();
+        ShapeConsoleDisplayer nameDisplayer;
 
-        Displayable someShape1 = new Square(rand(), rand(), rand());
-        someShape1.display();
+        nameDisplayer = new ShapeNameConsoleDisplayer(new Rectangle(rand(), rand(), rand(), rand()));
+        nameDisplayer.display();
 
-        someShape1 = new Triangle(rand(), rand(), rand(), rand(), rand());
-        someShape1.display();
+        nameDisplayer = new ShapeNameConsoleDisplayer(new Square(rand(), rand(), rand()));
+        nameDisplayer.display();
 
-        someShape1 = new Ellipse(rand(), rand());
-        someShape1.display();
+        nameDisplayer = new ShapeNameConsoleDisplayer(new Triangle(rand(), rand(), rand(), rand(), rand()));
+        nameDisplayer.display();
 
-        someShape1 = new Circle(rand(), rand());
-        someShape1.display();
+        nameDisplayer = new ShapeNameConsoleDisplayer(new Circle(rand(), rand()));
+        nameDisplayer.display();
+
+        nameDisplayer = new ShapeNameConsoleDisplayer(new Ellipse(rand(), rand()));
+        nameDisplayer.display();
 
 
-        //Or the same output using Shape class(Not wise because to display all the shapes it is sufficient to use the interface as was done above)
+        ShapeConsoleDisplayer drawingDisplayer;
 
-        System.out.println("\n\nUsing shape classes:\n");
+        drawingDisplayer = new ShapeDrawingConsoleDisplayer(new Rectangle(rand(), rand(), rand(), rand()));
+        drawingDisplayer.display();
 
-        Shape rectangle2 = new Rectangle(rand(), rand(), rand(), rand());
-        rectangle2.display();
+        drawingDisplayer = new ShapeDrawingConsoleDisplayer(new Square(rand(), rand(), rand()));
+        drawingDisplayer.display();
 
-        Shape someShape2 = new Square(rand(), rand(), rand());
-        someShape2.display();
+        drawingDisplayer = new ShapeDrawingConsoleDisplayer(new Triangle(rand(), rand(), rand(), rand(), rand()));
+        drawingDisplayer.display();
 
-        someShape2 = new Triangle(rand(), rand(), rand(), rand(), rand());
-        someShape2.display();
+        drawingDisplayer = new ShapeDrawingConsoleDisplayer(new Circle(rand(), rand()));
+        drawingDisplayer.display();
 
-        someShape2 = new Ellipse(rand(), rand());
-        someShape2.display();
-
-        someShape2 = new Circle(rand(), rand());
-        someShape2.display();
-
+        drawingDisplayer = new ShapeDrawingConsoleDisplayer(new Ellipse(rand(), rand()));
+        drawingDisplayer.display();
     }
 
     public static int rand(){

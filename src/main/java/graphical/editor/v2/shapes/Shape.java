@@ -1,4 +1,4 @@
-package graphical.editor.v2;
+package graphical.editor.v2.shapes;
 
 public abstract class Shape {
     protected int xCoordinate;

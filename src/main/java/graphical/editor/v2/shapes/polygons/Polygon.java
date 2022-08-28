@@ -1,6 +1,6 @@
 package graphical.editor.v2.shapes.polygons;
 
-import graphical.editor.v2.Shape;
+import graphical.editor.v2.shapes.Shape;
 
 public abstract class Polygon extends Shape {
     protected int[] sides;

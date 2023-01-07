@@ -1,3 +1,1 @@
-Simple marketplace app made with java core libs
-
-Enrollment task for java dev application
+Graphical editor task for java dev basics course
